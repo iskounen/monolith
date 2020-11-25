@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { TranslationText } from './src/translation_text'
 
 const WelcomeIndex = () => (
-  <div>
-    <h1>Welcome</h1>
-    <h2>Index</h2>
-  </div>
+  <>
+    <TranslationText text="ДОМ" translation="acceuil" size="1" />
+    <TranslationText text="ИНДЕКС" translation="sommaire" size="2" />
+  </>
 )
 
 document.addEventListener('DOMContentLoaded', () => {
