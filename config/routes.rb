@@ -3,5 +3,7 @@
 Rails.application.routes.draw do
   get 'home/index'
 
+  resources :accounts
+
   root 'home#index'
 end

@@ -2,9 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
+  display: inline-block;
   position: relative;
-  float: left;
-  clear: both;
   margin-bottom: 30px;
 `
 const Text = styled.span`
@@ -35,15 +34,21 @@ export const TranslationText = (props) => {
       textFontSize = "64px"
       translationFontSize = "16px"
       break
+    case "3":
+      textFontSize = "32px"
+      translationFontSize = "8px"
+      break
     default:
-      textFontSize = "128px"
-      translationFontSize = "32px"
+      textFontSize = "16px"
+      translationFontSize = "4px"
   }
 
   return (
-    <Wrapper>
-      <Text fontSize={textFontSize}>{props.text.toUpperCase()}</Text>
-      <Translation fontSize={translationFontSize}>{props.translation.toUpperCase()}</Translation>
-    </Wrapper>
+    <div>
+      <Wrapper>
+        <Text fontSize={textFontSize}>{props.text.toUpperCase()}</Text>
+        <Translation fontSize={translationFontSize}>{props.translation.toUpperCase()}</Translation>
+      </Wrapper>
+    </div>
   )
 }
