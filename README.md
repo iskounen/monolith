@@ -19,6 +19,14 @@ Things you may want to cover:
 
 * Services (job queues, cache servers, search engines, etc.)
 
+```shell
+bundle exec rake graphql:schema:idl
+```
+
+```shell
+yarn relay --watch
+```
+
 * Deployment instructions
 
 * ...

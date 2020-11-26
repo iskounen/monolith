@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { NavigationMenu } from './src/navigation_menu'
-import { TranslationText } from './src/translation_text'
+import { NavigationMenu } from '../src/navigation_menu'
+import { TranslationText } from '../src/translation_text'
 
 const HomeIndex = () => (
   <>
