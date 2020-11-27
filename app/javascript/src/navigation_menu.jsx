@@ -1,19 +1,14 @@
 import React from 'react'
-import { TranslationText } from './translation_text'
 
-export const NavigationMenu = (props) => {
+export const NavigationMenu = () => {
   return (
     <div>
       <ul>
         <li>
-          <a href="/" data-turbolinks="false">
-            <TranslationText text="дом" translation="home" size="3" />
-          </a>
+          <a href="/" data-turbolinks="false">Home</a>
         </li>
         <li>
-          <a href="/accounts" data-turbolinks="false">
-            <TranslationText text="счет" translation="accounts" size="3" />
-          </a>
+          <a href="/accounts" data-turbolinks="false">Accounts</a>
         </li>
       </ul>
     </div>

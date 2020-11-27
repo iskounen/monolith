@@ -18,12 +18,28 @@ export class AccountList extends React.Component {
         variables={{}}
         render={({error, props}) => {
           if (error) {
-            return <div>Error!</div>;
+            return <div>Error!</div>
           }
           if (!props) {
-            return <div>Loading...</div>;
+            return <div>Loading...</div>
           }
-          return <div>{ props.accounts.map(account => <div key={account.id}>{account.name}</div>) }</div>
+          return (
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                {props.accounts.map(account => <tr key={account.id}><td>{account.name}</td></tr>)}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>Count: {props.accounts.length}</td>
+                </tr>
+              </tfoot>
+            </table>
+          )
         }}
       />
     );
