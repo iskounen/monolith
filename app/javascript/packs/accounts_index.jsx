@@ -8,6 +8,9 @@ const AccountsIndex = () => (
     <NavigationMenu />
     <h1>Accounts</h1>
     <h2>Index</h2>
+    <div>
+      <a href="/accounts/new" data-turbolinks="false">New</a>
+    </div>
     <AccountList />
   </>
 )

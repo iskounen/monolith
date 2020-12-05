@@ -1,4 +1,4 @@
 module.exports = {
-  src: "./app/javascript/src",
+  src: "./app/javascript",
   schema: "./schema.graphql"
 }
