@@ -8,22 +8,22 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-export type accountListQueryVariables = {||};
-export type accountListQueryResponse = {|
+export type accountsListQueryVariables = {||};
+export type accountsListQueryResponse = {|
   +accounts: $ReadOnlyArray<{|
     +id: string,
     +name: string,
   |}>
 |};
-export type accountListQuery = {|
-  variables: accountListQueryVariables,
-  response: accountListQueryResponse,
+export type accountsListQuery = {|
+  variables: accountsListQueryVariables,
+  response: accountsListQueryResponse,
 |};
 */
 
 
 /*
-query accountListQuery {
+query accountsListQuery {
   accounts {
     id
     name
@@ -64,7 +64,7 @@ return {
     "argumentDefinitions": [],
     "kind": "Fragment",
     "metadata": null,
-    "name": "accountListQuery",
+    "name": "accountsListQuery",
     "selections": (v0/*: any*/),
     "type": "Query",
     "abstractKey": null
@@ -73,20 +73,20 @@ return {
   "operation": {
     "argumentDefinitions": [],
     "kind": "Operation",
-    "name": "accountListQuery",
+    "name": "accountsListQuery",
     "selections": (v0/*: any*/)
   },
   "params": {
-    "cacheID": "ccd799a7bd2c2bdaeb36b8a3e85ba538",
+    "cacheID": "ea23d280a4995ff4b85d043f60970c28",
     "id": null,
     "metadata": {},
-    "name": "accountListQuery",
+    "name": "accountsListQuery",
     "operationKind": "query",
-    "text": "query accountListQuery {\n  accounts {\n    id\n    name\n  }\n}\n"
+    "text": "query accountsListQuery {\n  accounts {\n    id\n    name\n  }\n}\n"
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '3f323d472b7bc4d0618a9ed710a76d97';
+(node/*: any*/).hash = 'e813df8c028362ec72fe9aa9a6b670e4';
 
 module.exports = node;

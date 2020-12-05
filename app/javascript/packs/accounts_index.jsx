@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { NavigationMenu } from '../src/navigation_menu'
-import { AccountList } from '../src/account_list'
+import { AccountsList } from '../src/accounts_list'
 
 const AccountsIndex = () => (
   <>
@@ -11,7 +11,7 @@ const AccountsIndex = () => (
     <div>
       <a href="/accounts/new" data-turbolinks="false">New</a>
     </div>
-    <AccountList />
+    <AccountsList />
   </>
 )
 

@@ -9,7 +9,7 @@ const DeleteButton = (props) => {
         environment,
         {
           mutation: graphql`
-            mutation accountListMutation ($accountID: ID!) {
+            mutation accountsListMutation ($accountID: ID!) {
               deleteAccount(input: {id: $accountID}) {
                 account {
                   id
@@ -43,8 +43,8 @@ const DeleteButton = (props) => {
   )
 }
 
-const AccountTable = props => {
-  const accountRowMaker = account => {
+const AccountsTable = props => {
+  const rowMaker = account => {
     return (
       <tr key={account.id}>
         <td>{account.name}</td>
@@ -53,7 +53,7 @@ const AccountTable = props => {
     )
   }
 
-  const accountRows = props.accounts.map(accountRowMaker)
+  const rows = props.accounts.map(rowMaker)
 
   return (
     <table>
@@ -63,7 +63,7 @@ const AccountTable = props => {
         </tr>
       </thead>
       <tbody>
-        {accountRows}
+        {rows}
       </tbody>
       <tfoot>
         <tr>
@@ -74,13 +74,13 @@ const AccountTable = props => {
   )
 }
 
-export class AccountList extends React.Component {
+export class AccountsList extends React.Component {
   render() {
     return (
       <QueryRenderer
         environment={environment}
         query={graphql`
-          query accountListQuery {
+          query accountsListQuery {
             accounts {
               id
               name
@@ -95,7 +95,7 @@ export class AccountList extends React.Component {
           if (!props) {
             return <div>Loading...</div>
           }
-          return <AccountTable {...props} />
+          return <AccountsTable {...props} />
         }}
       />
     );
