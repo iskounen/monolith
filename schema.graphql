@@ -70,4 +70,16 @@ type Query {
   Retun all accounts
   """
   accounts: [Account!]!
+
+  """
+  Return all statements
+  """
+  statements: [Statement!]!
+}
+
+"""
+A statement
+"""
+type Statement {
+  id: ID!
 }

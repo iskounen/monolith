@@ -10,6 +10,9 @@ export const NavigationMenu = () => {
         <li>
           <a href="/accounts" data-turbolinks="false">Accounts</a>
         </li>
+        <li>
+          <a href="/statements" data-turbolinks="false">Statements</a>
+        </li>
       </ul>
     </div>
   )

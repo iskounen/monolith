@@ -14,12 +14,20 @@ module Types
       description 'Retun all accounts'
     end
 
+    field :statements, [StatementType], null: false do
+      description 'Return all statements'
+    end
+
     def account(id:)
       Account.find(id)
     end
 
     def accounts
       Account.all
+    end
+
+    def statements
+      Statement.all
     end
   end
 end

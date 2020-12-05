@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   resources :accounts
+  resources :statements
 
   root 'home#index'
 end
